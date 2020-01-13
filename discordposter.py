@@ -19,8 +19,8 @@ def weather(post_url, bitcoin_price):
     real_temp = (((weather_temp - 273.15)*9)/5)+32
 
     payload = {"content": "The forcast for " + weather_date + " is as follows:\
-               \nTemperature: " + str(real_temp) + "\nHumidity: " + str(weather_humidity) + "\
-               \nClearness: " + weather_sky + "\nCity: " + weather_city + "\n\nOn a side note Bitcoin is at: " + bitcoin_price + ":moneybag:"}
+               \n\n Temperature: " + str(real_temp) + "\n\n Humidity: " + str(weather_humidity) + "\
+               \n\n Clearness: " + weather_sky + "\n\n City: " + weather_city + "\n\nOn a side note Bitcoin is at: " + bitcoin_price + ":moneybag:"}
     requests.post(post_url, data=payload)    
 
 
