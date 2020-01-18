@@ -3,7 +3,7 @@ import requests
 import time
 
 POST_URL = "https://discordapp.com/api/webhooks/666187507876233231/7bzJQ66O4T8GeGzip735FgEAacTgdLIqG2FJjZ-4OSjR7cAeMXlu1rpzTdidw1Y9VBmQ"
-CITIES = [5110629, 5907166]
+CITIES = [5110629, 5907166, 1701667]
 
 class post_it():
     def timeit(loop_time):
@@ -26,7 +26,7 @@ class post_it():
         weather_date = weather['list'][0]['dt_txt']
         weather_city = weather['city']['name']
         real_temp = ((weather_temp - 273.15)*1.8)+32
-        payload = {"content": "\nThe forcast for " + weather_date + " is as follows:\
+        payload = {"content": "\nThe forecast for " + weather_date + " is as follows:\
         	   \n    _Temperature_: " + str(real_temp) + "\n    _Humidity_: " + str(weather_humidity) + "\
                    \n    _Clearness_: " + weather_sky + "\n    _City_: " + weather_city} 
         requests.post(post_url, data=payload)  
