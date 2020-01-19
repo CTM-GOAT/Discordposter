@@ -43,4 +43,3 @@ class post_it():
             print("Failure!: ", e)
 
 post_it.postthis(POST_URL, CITIES)
-#test
