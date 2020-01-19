@@ -37,7 +37,7 @@ class post_it():
                 for the_city in cities:
                     post_it.weather(post_url, the_city)
                 post_it.bitcoin(post_url)
-                post_it.timeit(600)
+                post_it.timeit(10800)
                 
         except Exception as e:
             print("Failure!: ", e)
